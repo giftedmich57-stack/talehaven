@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaleHaven — Where Every Story Finds a Home</title>
+<style>
+:root{--ink:#17213b;--purple:#6d35b1;--soft:#f7f4fb;--line:#ece8f2}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 5%;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
+.logo{font-family:Georgia,serif;font-size:27px;font-weight:700;color:var(--purple)}.tag{font-size:11px;color:#666}
+nav{display:flex;gap:20px;align-items:center}nav a{color:var(--ink);text-decoration:none;font-size:14px}
+.btn{border:0;border-radius:24px;padding:12px 19px;background:var(--purple);color:#fff;font-weight:700;cursor:pointer}.btn.light{background:#fff;color:var(--purple);border:1px solid #cdb9e4}
+.hero{padding:70px 7%;background:linear-gradient(110deg,#faf4eb,#eee6f7);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.hero h1{font:700 54px Georgia,serif;margin:10px 0}.hero h1 span{color:var(--purple);font-style:italic}.hero p{font-size:17px;line-height:1.6;max-width:570px}
+.hero-card{background:#fff;padding:35px;border-radius:24px;box-shadow:0 12px 40px #0001;text-align:center}.book{height:230px;border-radius:16px;background:linear-gradient(135deg,#39204f,#9b65bd);display:flex;align-items:center;justify-content:center;color:#fff;font:700 34px Georgia,serif;padding:25px}
+section{padding:38px 5%}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.section-title h2{font:700 27px Georgia,serif;margin:0}
+.categories{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}.cat{padding:18px 8px;background:var(--soft);border-radius:16px;text-align:center;font-size:13px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 5px 18px #00000008}.cover{height:220px;background:linear-gradient(135deg,#5b347e,#d9a9c6);display:flex;align-items:center;justify-content:center;color:#fff;font:700 24px Georgia,serif;text-align:center;padding:20px}.card-body{padding:16px}.card h3{margin:0 0 8px;font:700 18px Georgia,serif}.card p{font-size:13px;line-height:1.5;color:#666}.pill{display:inline-block;font-size:11px;padding:5px 9px;border-radius:20px;background:#f4eafa;color:var(--purple);font-weight:700}.writer{margin:10px 5%;padding:30px 6%;border-radius:20px;background:#eadcf6;display:flex;justify-content:space-between;align-items:center}.writer h2{font:700 28px Georgia,serif;margin:0 0 8px}footer{background:#151b31;color:#fff;padding:35px 5%;margin-top:35px}footer a{color:#fff;text-decoration:none;margin-right:20px;font-size:13px}
+@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr;padding:45px 6%}.hero h1{font-size:42px}.categories{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.writer{display:block}.writer .btn{margin-top:18px}}
+@media(max-width:500px){.grid{grid-template-columns:1fr}.categories{grid-template-columns:repeat(2,1fr)}header{padding:13px 4%}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="logo">📖 TaleHaven</div><div class="tag">Where Every Story Finds a Home.</div></div>
+  <nav><a href="#home">Home</a><a href="#stories">Stories</a><a href="#romance">Romance</a><a href="#trending">Trending</a><a href="#writers">Write for TaleHaven</a></nav>
+  <div><button class="btn light" onclick="alert('Login will be connected in the next version.')">Login</button> <button class="btn" onclick="alert('Sign-up will be connected in the next version.')">Sign Up</button></div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div><div class="pill">WELCOME TO TALEHAVEN</div><h1>Where Every Story Finds a <span>Home.</span></h1>
+  <p>Discover amazing stories, fall in love with unforgettable characters, and lose yourself in worlds of imagination.</p>
+  <a href="#stories"><button class="btn">📖 Start Reading →</button></a></div>
+  <div class="hero-card"><div class="book">YOUR NEXT<br>FAVORITE<br>STORY</div><p><b>Free to read.</b> New stories added regularly.</p></div>
+</section>
+
+<section>
+<div class="categories">
+<div class="cat">❤️<br>Romance</div><div class="cat">👑<br>Billionaire & Marriage</div><div class="cat">💔<br>Drama</div><div class="cat">🔥<br>Trending</div><div class="cat">✨<br>New Releases</div><div class="cat">🧒🏽<br>Children's Stories</div><div class="cat">▦<br>All Categories</div>
+</div>
+</section>
+
+<section id="stories">
+<div class="section-title"><h2>👑 Featured Stories</h2><span>View All →</span></div>
+<div class="grid">
+<div class="card"><div class="cover">Oops, I Married<br>the Wrong Man</div><div class="card-body"><span class="pill">Romance</span><h3>Oops, I Married the Wrong Man</h3><p>A contract marriage. A hidden secret. And a husband she never meant to love.</p><button class="btn" onclick="readStory('Oops, I Married the Wrong Man')">Read Now →</button></div></div>
+<div class="card"><div class="cover">The<br>Billionaire Dad</div><div class="card-body"><span class="pill">Billionaire</span><h3>The Billionaire Dad</h3><p>He was a billionaire. She was a single mom. One unexpected night changed everything.</p><button class="btn" onclick="readStory('The Billionaire Dad')">Read Now →</button></div></div>
+<div class="card"><div class="cover">The Other<br>Side of Love</div><div class="card-body"><span class="pill">Drama</span><h3>The Other Side of Love</h3><p>She gave him her heart, but he had another side. Can love survive the truth?</p><button class="btn" onclick="readStory('The Other Side of Love')">Read Now →</button></div></div>
+<div class="card"><div class="cover">His Unexpected<br>Love</div><div class="card-body"><span class="pill">Romance</span><h3>His Unexpected Love</h3><p>She was just a normal girl—until he walked into her life and changed everything.</p><button class="btn" onclick="readStory('His Unexpected Love')">Read Now →</button></div></div>
+</div>
+</section>
+
+<section id="trending">
+<div class="section-title"><h2>🔥 Trending Now</h2><span>View All →</span></div>
+<div class="grid">
+<div class="card"><div class="card-body"><span class="pill">Romance</span><h3>My Dangerous Love</h3><p>A love neither of them saw coming.</p><button class="btn" onclick="readStory('My Dangerous Love')">Read Now →</button></div></div>
+<div class="card"><div class="card-body"><span class="pill">Billionaire</span><h3>The Royal Heir</h3><p>One secret. One powerful family. One impossible love.</p><button class="btn" onclick="readStory('The Royal Heir')">Read Now →</button></div></div>
+<div class="card"><div class="card-body"><span class="pill">Drama</span><h3>Second Chance at Love</h3><p>Some hearts find their way back.</p><button class="btn" onclick="readStory('Second Chance at Love')">Read Now →</button></div></div>
+<div class="card"><div class="card-body"><span class="pill">Children</span><h3>Little Star Learns to Share</h3><p>A sweet story about kindness and friendship.</p><button class="btn" onclick="readStory('Little Star Learns to Share')">Read Now →</button></div></div>
+</div>
+</section>
+
+<section id="writers" class="writer"><div><h2>Are you a writer?</h2><p>Share your story with readers and bring your imagination to life.</p></div><button class="btn" onclick="alert('Writer submissions will be connected in a later version.')">Submit Your Story →</button></section>
+</main>
+
+<footer><div class="logo" style="color:#fff">📖 TaleHaven</div><p>Where Every Story Finds a Home.</p><p><a href="#home">Home</a><a href="#stories">Stories</a><a href="#writers">Write for TaleHaven</a><a href="#">About</a></p><small>© 2026 TaleHaven. All rights reserved.</small></footer>
+
+<script>
+function readStory(title){alert(title + "\\n\\nThe reading page is the next feature we will connect to your real chapters. 📖");}
+</script>
+</body>
+</html>
